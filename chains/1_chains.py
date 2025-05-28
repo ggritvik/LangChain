@@ -30,3 +30,6 @@ result = chain.invoke({
 })
 
 print(result)
+# This code creates a chain that generates facts about a given animal using the Mistral model from OpenRouter.
+# It uses a prompt template to format the input and an output parser to extract the string content from the model's response.
+# The result is printed to the console.
