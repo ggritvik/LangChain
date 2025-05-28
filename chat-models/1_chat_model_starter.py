@@ -14,8 +14,8 @@ llm = ChatOpenAI(
 
 
 messages = [
-    SystemMessage(content="You are an expert in mathematics."),
-    HumanMessage(content="What's differentiation?")
+    SystemMessage(content="You are an expert in biology."),
+    HumanMessage(content="What's a cell?")
 ]
 
 response = llm.invoke(messages)
