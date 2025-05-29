@@ -26,7 +26,9 @@ format_promt = RunnableLambda(lambda x: prompt_template.format_prompt(**x))
 invoke_model = RunnableLambda(lambda x: model.invoke(x.to_messages()))
 parse_output = RunnableLambda(lambda x: x.content)
 
-chain = RunnableSequence(first = format_promt, middle = [invoke_model], last = parse_output)
+chain = RunnableSequence(first = format_promt, 
+                         middle = [invoke_model], 
+                         last = parse_output)
 
 chain = format_promt | invoke_model | parse_output
 
