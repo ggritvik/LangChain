@@ -26,7 +26,7 @@ translator_template = ChatPromptTemplate.from_messages([
 # additional processing steps using runnableLambda
 prepare_for_translation = RunnableLambda(lambda output: {
     "text": output,
-    "language": "French"
+    "language": "Hindi"
 })
 
 chain = animal_facts__template | model | StrOutputParser() | prepare_for_translation | translator_template | model | StrOutputParser()
