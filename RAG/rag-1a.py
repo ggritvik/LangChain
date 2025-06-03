@@ -3,13 +3,14 @@ from dotenv import load_dotenv
 # Import necessary modules from LangChain and community extensions
 from langchain.text_splitter import CharacterTextSplitter
 from langchain_community.document_loaders import TextLoader
-from langchain_community.vectorstores import Chroma
+#from langchain_community.vectorstores import Chroma
 
 # from langchain_community.embeddings import OpenAIEmbeddings
 
 # from langchain_openai import OpenAIEmbeddings
 # from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_chroma import Chroma
 
 load_dotenv()
 
@@ -33,7 +34,7 @@ if not os.path.exists(persistent_dir):
     documents = loader.load()
 
     # Split the documents into chunks for processing
-    text_splitter = CharacterTextSplitter(chunk_size=300, chunk_overlap=0)
+    text_splitter = CharacterTextSplitter(chunk_size=100, chunk_overlap=0)
     docs = text_splitter.split_documents(documents)
 
     print("\n------ Doc Chunk info ------")
