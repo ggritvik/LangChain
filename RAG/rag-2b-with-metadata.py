@@ -38,7 +38,7 @@ query = "How did Juliet die?"
 # Create a retriever object with similarity search and a score threshold
 retriever = db.as_retriever(
     search_type="similarity_score_threshold",
-    search_kwargs={"k": 3, "score_threshold": 0.1},
+    search_kwargs={"k": 3, "score_threshold": 0.5},
 )
 
 # Retrieve the most relevant documents for the query

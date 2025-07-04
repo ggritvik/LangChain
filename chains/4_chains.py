@@ -76,7 +76,7 @@ chain = (
 
 # Invoke the chain with a specific movie name
 result = chain.invoke({
-    "movie_name": "You have got a mail",
+    "movie_name": "Mission Impossible - Dead Reckoning Part One",
 })
 
 # Print the final combined analysis
